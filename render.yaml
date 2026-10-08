@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: personal-ai-assistant
+    runtime: python
+    buildCommand: pip install -r requirements-lite.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: EMBEDDING_PROVIDER
+        value: gemini
+  - type: web
+    name: personal-ai-assistant-api
+    runtime: python
+    buildCommand: pip install -r requirements-lite.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: EMBEDDING_PROVIDER
+        value: gemini

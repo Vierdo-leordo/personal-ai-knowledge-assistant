@@ -1,0 +1,8 @@
+[
+  {"question": "What is overfitting and how can it be reduced?", "expected_file": "machine_learning_notes.md", "expected_keywords": ["noise", "regularization"]},
+  {"question": "Explain transfer learning.", "expected_file": "machine_learning_notes.md", "expected_keywords": ["pretrained", "fine-tuned"]},
+  {"question": "What is process scheduling?", "expected_file": "operating_systems.txt", "expected_keywords": ["ready queue", "CPU"]},
+  {"question": "What are the four conditions for deadlock?", "expected_file": "operating_systems.txt", "expected_keywords": ["mutual exclusion", "circular wait"]},
+  {"question": "How does a hash table handle collisions?", "expected_file": "data_structures_notes.docx", "expected_keywords": ["chaining", "open addressing"]},
+  {"question": "What is the difference between a stack and a queue?", "expected_file": "data_structures_notes.docx", "expected_keywords": ["LIFO", "FIFO"]}
+]

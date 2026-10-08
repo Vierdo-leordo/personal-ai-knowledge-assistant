@@ -1,0 +1,33 @@
+OPERATING SYSTEMS - LECTURE NOTES
+
+Chapter 1: Processes
+
+A process is a program in execution, together with its current activity such as the program counter, registers and memory. Each process is represented in the operating system by a process control block (PCB), which stores its state, CPU registers, scheduling information and memory-management information.
+
+A process moves through several states: new, ready, running, waiting and terminated. The ready queue holds all processes that are waiting to be assigned to the CPU.
+
+A thread is the smallest unit of CPU execution within a process. Threads of the same process share code, data and open files but have their own stack and registers.
+
+Chapter 2: Process Scheduling
+
+Process scheduling is the activity of the operating system that decides which process in the ready queue gets the CPU next. The goal of CPU scheduling is to maximize CPU utilization and throughput while minimizing waiting time, turnaround time and response time.
+
+First-Come, First-Served (FCFS) scheduling runs processes in the order they arrive. It is simple but suffers from the convoy effect, where short processes wait behind a long one.
+
+Shortest Job First (SJF) scheduling picks the process with the smallest next CPU burst. SJF gives the minimum average waiting time but requires knowing burst lengths in advance and can cause starvation of long processes.
+
+Round Robin (RR) scheduling gives each process a fixed time quantum in a cyclic order. If the quantum is too large RR behaves like FCFS; if it is too small the overhead of context switching dominates.
+
+Priority scheduling assigns the CPU to the process with the highest priority. Starvation of low-priority processes can be solved by aging, which gradually increases the priority of processes that wait for a long time.
+
+A context switch is the procedure of saving the state of the currently running process and loading the saved state of the next process. Context switching is pure overhead because the system does no useful work while switching.
+
+Chapter 3: Deadlocks
+
+A deadlock is a situation where a set of processes are blocked because each process holds a resource and waits for another resource held by another process in the set. Four conditions must hold simultaneously for a deadlock: mutual exclusion, hold and wait, no preemption and circular wait.
+
+Deadlocks can be handled by prevention, avoidance (for example the Banker's algorithm), detection and recovery, or by ignoring the problem as many general-purpose operating systems do.
+
+Chapter 4: Memory Management
+
+Paging is a memory-management scheme that divides physical memory into fixed-size frames and logical memory into pages of the same size, eliminating external fragmentation. Virtual memory is a technique that allows execution of processes that are not completely in main memory, giving each process the illusion of a large contiguous address space. A page fault occurs when a process accesses a page that is not currently in physical memory.

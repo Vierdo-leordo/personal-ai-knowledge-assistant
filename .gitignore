@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+data/uploads/*
+data/embeddings/*
+data/metadata/*
+vector_store/*
+outputs/*
+!**/.gitkeep
+.pytest_cache/
+.DS_Store

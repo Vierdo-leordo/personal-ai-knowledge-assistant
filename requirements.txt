@@ -1,0 +1,28 @@
+# --- Web app & API ---
+streamlit>=1.40
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9      # file uploads in FastAPI
+
+# --- Document processing ---
+pymupdf>=1.24                # fast PDF extraction (pypdf is the fallback)
+pypdf>=4.0
+python-docx>=1.1
+
+# --- Embeddings & vector database ---
+sentence-transformers>=3.0   # local embeddings (all-MiniLM-L6-v2); pulls in PyTorch
+chromadb>=0.5
+
+# --- Core ---
+numpy>=1.26
+pandas>=2.0
+requests>=2.31
+python-dotenv>=1.0
+
+# --- Voice (optional but recommended) ---
+gTTS>=2.5                    # text-to-speech
+SpeechRecognition>=3.10      # free speech-to-text fallback
+
+# --- Testing ---
+pytest>=8.0
+httpx>=0.27

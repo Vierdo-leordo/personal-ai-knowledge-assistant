@@ -1,0 +1,15 @@
+# Lightweight install (no PyTorch) – ideal for Streamlit Community Cloud / Render free tier.
+# Uses Gemini or OpenAI embeddings (set EMBEDDING_PROVIDER=gemini) or the built-in offline embedder.
+streamlit>=1.40
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+pymupdf>=1.24
+pypdf>=4.0
+python-docx>=1.1
+chromadb>=0.5
+numpy>=1.26
+pandas>=2.0
+requests>=2.31
+python-dotenv>=1.0
+gTTS>=2.5
